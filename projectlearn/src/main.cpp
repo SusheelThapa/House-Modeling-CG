@@ -22,7 +22,6 @@
 #include <model.h>
 #include <Animator.h>
 
-
 #include <iostream>
 
 /**
@@ -39,7 +38,6 @@ Camera camera(glm::vec3(0.0f, 0.0f, -35.0f));
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
-
 
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
@@ -170,13 +168,11 @@ int main()
      * Set the OpenGL profile that we will be using,
      *  And GLFW_OPENGL_CORE_PROFILE indicates we want to used core profile of OpenGL
      *  that include modern OpenGL feaatures and exclude deprecated functionality.
-     *
-
+     */
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
 
     /* Creating GLFW Window with above mention screen width and height*/
     GLFWwindow *window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "House Modeling", NULL, NULL);
@@ -213,7 +209,6 @@ int main()
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
-
 
     /*Enabling the depth testing in OpenGL*/
     glEnable(GL_DEPTH_TEST);
@@ -285,7 +280,6 @@ int main()
     /**
      * Defining an array called skyboxVertices that contains the vertex position for a sky box
      */
-
     GLfloat skyboxVertices[] = {
         // Positions
         -1.0f, 1.0f, -1.0f,
@@ -330,7 +324,6 @@ int main()
         -1.0f, -1.0f, 1.0f,
         1.0f, -1.0f, 1.0f};
 
-
     /**
      * Defining variable that will store OpenGL handles that
      * corresponds to Vertex Array Objects(VAOs) and Vertex Buffer Objects(VBO)
@@ -359,7 +352,6 @@ int main()
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid *)0);
     glBindVertexArray(0);
-
 
     /**
      * Creating a vector namede 'faces' and
@@ -522,7 +514,6 @@ int main()
         float currentFrame = static_cast<float>(glfwGetTime());
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
-
 
         /*Updating and manage animations of animator object*/
         animator.UpdateAnimation(deltaTime);
@@ -692,7 +683,6 @@ int main()
             ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
         }
 
-
         /*Swaps the front and back buffers of the window*/
         glfwSwapBuffers(window);
 
@@ -713,7 +703,6 @@ int main()
         ImGui_ImplOpenGL3_Shutdown();
         ImGui::DestroyContext();
     }
-
 
     /*Cleaning up and terminating GLFW library*/
     glfwTerminate();
