@@ -1,97 +1,59 @@
 # House-Modeling-CG
 
-## Project Dependencies
+The **House Modeling** is a 3D graphics application that demonstrates the rendering and animation of 3D models using OpenGL and the Assimp library. This project showcases the process of loading 3D models, materials, textures, animations, and simulating real-time rendering using modern graphics techniques.
 
-## Setting up Project
+## Table of Contents
 
-### Libraries
+- [Description](#description)
+- [Key Features](#key-features)
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+  - [Prerequisites](./build.md#prerequisites)
+  - [Building up Project](./build.md#building-the-project)
+    - [Setting up Libraries](./build.md#setting-up-libraries)
+    - [Setting up Models](./build.md#setting-up-models)
+    - [Build Steps](./build.md#builds-steps)
+  - [Executing Project](./build.md#executing-project)
+  - [Troubleshooting](./build.md#troubleshooting)
+- [License](#license)
+- [Contact](#contact)
 
-1. `assimp`
+## Description
 
-   - Clone the `assimp` from its official source
+The main goal of this project is to provide a hands-on example of working with 3D graphics in a real-time rendering environment. The application loads 3D models in various formats, processes their materials, and displays them on the screen. It also supports animations, allowing users to interactively control the camera and explore the 3D scenes.
 
-     ```bash
-     git clone https://github.com/assimp/assimp.git
-     ```
+## Key Features
 
-2. `glfw`
+- **3D Model Rendering:** View 3D models with realistic lighting, materials, and textures, enhancing their visual quality.
 
-   - Clone the `glfw` from its official source
+- **Animation Playback:** Import animations along with models and play them in real-time, showcasing dynamic movements and transformations.
 
-     ```bash
-     git clone https://github.com/glfw/glfw.git
-     ```
+- **Camera Control:** Navigate the 3D scene using a user-friendly camera system, allowing zoom, rotation, and movement.
 
-3. `glm`
+- **Bone Animation:** Support for skeletal animations with bone transformations, enabling complex character animations.
 
-   - Clone the `glm` from its official source
+- **Model Interaction:** Interact with the loaded 3D models, examining them from different angles and perspectives.
 
-     ```bash
-     git clone https://github.com/g-truc/glm.git
-     ```
+- **User-Friendly Interface:** An intuitive user interface provides controls for loading models, applying animations, and adjusting camera settings.
 
-4. `imgui`
+## Demo
 
-   - Download the `imgui` folder from [here](https://drive.google.com/drive/folders/1FZn9a0Ud0LNCRrs_HPmCfizxk3lFqF3y?usp=sharing).
+## Getting Started
 
-5. `glad`
+For detailed instructions on building and running the project, please refer to the [`build.md`](./build.md) file in the repository.
 
-   - Head over this [url](https://glad.dav1d.de/#language=c&specification=gl&api=gl%3D4.0&api=gles1%3Dnone&api=gles2%3Dnone&api=glsc2%3Dnone&profile=core&extensions=GL_INTEL_blackhole_render&extensions=GL_INTEL_conservative_rasterization&extensions=GL_INTEL_fragment_shader_ordering&extensions=GL_INTEL_framebuffer_CMAA&extensions=GL_INTEL_map_texture&extensions=GL_INTEL_parallel_arrays&extensions=GL_INTEL_performance_query&loader=on)
-   - Click over **Generate** button
-   - Then download `glad.zip` file
-   - The file structure inside `glad.zip` will be
+## Dependencies
 
-     ```
-     ├── include
-     │   ├── glad
-     │   │   └── glad.h
-     │   └── KHR
-     │       └── khrplatform.h
-     └── src
-         └── glad.c
+- [CMAKE](https://cmake.org)
+- [assimp](https://github.com/assimp/assimp)
+- [glfw](https://github.com/glfw/glfw)
+- [glm](https://github.com/g-truc/glm)
+- [imgui](https://github.com/ocornut/imgui)
 
-     4 directories, 4 files
-     ```
+## License
 
-   - Copy `glad` and `KHR` folder inside `projectlearn/include/` directory
-   - Copy `glad.c` inside `projectlearn/src/`
+This project is licensed under the [MIT License](LICENSE).
 
-6. `stb_image.h`
+## Contact
 
-   - Download `std_image.h` files from [here](https://github.com/nothings/stb/blob/master/stb_image.h).
-   - Move downloaded `stb_image.h` into `projectlearn/include/` directory
-
-### Models
-
-- Download the `models` folder from [here](https://drive.google.com/drive/folders/1FZn9a0Ud0LNCRrs_HPmCfizxk3lFqF3y?usp=sharing)
-- Move downloaded `models` folder inside `projectlearn/res/`
-
-## Running Project
-
-1. Execute `cmake build .` to build the library we have cloned.
-
-   ```terminal
-   cmake build .
-   ```
-
-   _Note: When you first time execute this command, it make take some time_
-
-2. Compile the project using make
-
-   ```terminal
-   make
-   ```
-
-3. Executing the project
-
-   ```terminal
-   ./projectlearn/src/MyProject
-   ```
-
-   <i>
-   Note:
-
-   It may take 3 to 10 minutes to load depending upon your RAM and Graphics Card
-
-   You might be ask to **close** the program but chose **wait**.
-   </i>
+For any inquiries or feedback,please contact [Susheel Thapa](mailto:077bct090.susheel@pcampus.edu.np) or [Sandhya Baral](mailto:077bct076.sandhya@pcampus.edu.np).
