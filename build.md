@@ -99,7 +99,7 @@ Before you begin, ensure that you have the following dependencies installed:
    cmake -G "Unix Makefiles" build .
    ```
 
-   _Note: When you first time execute this command, it make take some time_
+   _Note: When you first execute this command, it might take some time_
 
 2. Compile the project using `make`
 
@@ -118,7 +118,7 @@ Before you begin, ensure that you have the following dependencies installed:
 
 It may take 3 to 10 minutes to load depending upon your RAM and Graphics Card
 
-You might be ask to **close** the program but chose **wait**.
+You might be asked to **close** the program, but you choose **wait**.
 </i>
 
 ## Troubleshooting
