@@ -15,3 +15,9 @@ assimp/
 glfw/
 glm
 imgui/
+glad/
+KHR/
+glad.c
+stb_image.h
+models
+MyProject
