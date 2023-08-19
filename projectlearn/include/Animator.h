@@ -16,6 +16,7 @@ public:
 	 * bone transformation matrices.
 	 */
 	Animator(Animation *animation)
+
 	{
 		m_CurrentTime = 0.0;
 		m_CurrentAnimation = animation;
@@ -24,6 +25,7 @@ public:
 		m_FinalBoneMatrices.reserve(1000);
 
 		/*Fills m_FinalBoneMatrices vector with identity matrices*/
+
 		for (int i = 0; i < 1000; i++)
 			m_FinalBoneMatrices.push_back(glm::mat4(1.0f));
 	}
@@ -43,6 +45,7 @@ public:
 
 	/*Sets the animator to play a new animation*/
 	void PlayAnimation(Animation *pAnimation)
+
 	{
 		m_CurrentAnimation = pAnimation;
 		m_CurrentTime = 0.0f;
@@ -98,6 +101,7 @@ public:
 		for (int i = 0; i < node->childrenCount; i++)
 			CalculateBoneTransform(&node->children[i], globalTransformation);
 	}
+
 
 	/*Return the vector of final bone transformation matrices that were calculated during animation update*/
 	std::vector<glm::mat4> GetFinalBoneMatrices()

@@ -1,7 +1,9 @@
 #ifndef MODEL_H
 #define MODEL_H
 
+
 #include <glad/glad.h>
+
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -28,6 +30,7 @@
 using namespace std;
 
 unsigned int TextureFromFile(const char *path, const string &directory, bool gamma = false);
+
 
 /**
  * Custom Data types: Bulbs
@@ -123,6 +126,7 @@ private:
             return;
         }
 
+
         /*Extract the directory path from the given file path*/
         directory = path.substr(0, path.find_last_of('/'));
 
@@ -172,6 +176,7 @@ private:
         vector<Vertex> vertices;
         vector<unsigned int> indices;
         vector<Texture> textures;
+
         glm::vec3 position; // for light bulbs
         glm::vec3 normal;
 

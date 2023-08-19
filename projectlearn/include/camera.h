@@ -8,6 +8,7 @@
 #include "glm/fwd.hpp"
 
 #include <math.h>
+
 #include <vector>
 
 /*Defining Camera Position*/
@@ -19,6 +20,7 @@ enum Camera_Movement
 	RIGHT,
 	UP,
 	DOWN,
+
 	/*Circular movement*/
 	CRIGHT,
 	CLEFT

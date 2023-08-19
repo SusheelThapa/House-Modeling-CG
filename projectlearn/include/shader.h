@@ -14,6 +14,7 @@ class Shader
 public:
     unsigned int ID;
 
+
     Shader(const char *vertexPath, const char *fragmentPath)
     {
 
@@ -29,6 +30,7 @@ public:
         std::string fragmentCode;
         std::ifstream vShaderFile;
         std::ifstream fShaderFile;
+
 
         /*Setting the exception flags for the input file streams*/
         vShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
@@ -193,6 +195,7 @@ public:
         glUniformMatrix2fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &mat[0][0]);
     }
 
+
     /*Sets 3X3 uniform value in the shader program*/
     void setMat3(const std::string &name, const glm::mat3 &mat) const
     {
@@ -227,6 +230,7 @@ private:
                 glGetShaderInfoLog(shader, 1024, NULL, infoLog);
                 std::cout << "ERROR::SHADER_COMPILATION_ERROR of type: " << type << "\n"
                           << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
+
             }
         }
         else
@@ -235,6 +239,7 @@ private:
             if (!success)
             {
                 glGetProgramInfoLog(shader, 1024, NULL, infoLog);
+
                 std::cout << "ERROR::PROGRAM_LINKING_ERROR of type: " << type << "\n"
                           << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
             }

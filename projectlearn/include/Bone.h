@@ -1,5 +1,6 @@
 #pragma once
 
+
 #include <assimp/scene.h>
 #include <list>
 #include <glm/glm.hpp>
@@ -113,6 +114,7 @@ public:
 	 * based on the animation time by calculating interpolated translation,
 	 * rotation and scaling matrices based on animation time..
 	 */
+
 	void Update(float animationTime)
 	{
 		glm::mat4 translation = InterpolatePosition(animationTime);
@@ -132,6 +134,7 @@ public:
 	int GetBoneID() { return m_ID; }
 
 	/*Returns the index of the keyframe position within 'm_Positions' vector*/
+
 	int GetPositionIndex(float animationTime)
 	{
 		for (int index = 0; index < m_NumPositions - 1; ++index)
@@ -240,7 +243,7 @@ private:
 	}
 
 	/*Member variable of Bone Class*/
-	std::vector<KeyPosition> m_Positions;
+  std::vector<KeyPosition> m_Positions;
 	std::vector<KeyRotation> m_Rotations;
 	std::vector<KeyScale> m_Scales;
 	int m_NumPositions;

@@ -5,6 +5,7 @@
 /**
  * Defination of C++ structure 'BoneInfo
  */
+
 struct BoneInfo
 {
 	/*id is index in finalBoneMatrices*/

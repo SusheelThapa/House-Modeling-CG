@@ -25,6 +25,7 @@ struct AssimpNodeData
 class Animation
 {
 public:
+
 	/*Default constructor of Animation Class*/
 	Animation() = default;
 
@@ -98,6 +99,7 @@ public:
 	}
 
 private:
+
 	/**
 	 * Reading bone information from animation channels and
 	 * adding any missing bones to the bone information map.
@@ -112,6 +114,7 @@ private:
 		int &boneCount = model.GetBoneCount();		// getting the m_BoneCounter from Model class
 
 		/*Reading channels(bones engaged in an animation and their keyframes)*/
+
 		for (int i = 0; i < size; i++)
 		{
 			auto channel = animation->mChannels[i];
@@ -122,6 +125,7 @@ private:
 				boneInfoMap[boneName].id = boneCount;
 				boneCount++;
 			}
+
 
 			m_Bones.push_back(Bone(channel->mNodeName.data,
 								   boneInfoMap[channel->mNodeName.data].id, channel));
@@ -142,11 +146,13 @@ private:
 		assert(src);
 
 		/*Copies name of source node, transformation matrix, and set the number of children node*/
+
 		dest.name = src->mName.data;
 		dest.transformation = AssimpGLMHelpers::ConvertMatrixToGLMFormat(src->mTransformation);
 		dest.childrenCount = src->mNumChildren;
 
 		/*Recursively iterated through each child node of source node*/
+
 		for (int i = 0; i < src->mNumChildren; i++)
 		{
 			AssimpNodeData newData;
@@ -155,7 +161,9 @@ private:
 		}
 	}
 
+
 	/*Variable to store information about animation, including bode data, hierarchy structure and other animation-related details*/
+
 	float m_Duration;
 	int m_TicksPerSecond;
 	std::vector<Bone> m_Bones;

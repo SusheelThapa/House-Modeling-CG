@@ -14,6 +14,7 @@ using namespace std;
 
 #define MAX_BONE_INFLUENCE 4
 
+
 /**
  *******************************************************************************************
  *                                                                                         *
@@ -59,6 +60,7 @@ struct Material
     bool hasTexture;
 };
 
+
 /**
  * Representation of texture information for a 3D models
  */
@@ -90,6 +92,7 @@ public:
         this->textures = textures;
         this->mat = mat;
         this->name = name;
+
 
         /**
          * Identifying certain type of mesh based on name,
@@ -141,6 +144,7 @@ public:
         unsigned int normalNr = 1;
         unsigned int heightNr = 1;
 
+
         for (unsigned int i = 1; i <= (textures.size()); i++)
         {
             /*Activating texture unit correponsing to the current texture*/
@@ -160,6 +164,7 @@ public:
             else if (name == "texture_height")
                 number = std::to_string(heightNr++); // transfer unsigned int to string
 
+
             /*Retrieving the location of the shader variable corresponding to the current texture type and number*/
             glUniform1i(glGetUniformLocation(shader.ID, (name + number).c_str()), i);
 
@@ -176,6 +181,7 @@ public:
             shader.setBool("isGlass", isGlass);
             shader.setBool("isWater", isWater);
         }
+
 
         /* Rendering the Mesh using defined OpenGL VAO*/
         glBindVertexArray(VAO);                                                                      // Binds previously selected VAO
@@ -200,6 +206,7 @@ private:
         glGenVertexArrays(1, &VAO);
         glGenBuffers(1, &VBO);
         glGenBuffers(1, &EBO);
+
 
         /**
          * Binding VBO,EBO and VAO in preparation for specifying vertex
