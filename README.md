@@ -39,6 +39,8 @@ The main goal of this project is to provide a hands-on example of working with 3
 
 ## Demo
 
+https://github.com/SusheelThapa/House-Modeling-CG/assets/83917129/2ac36cfc-845f-4dcb-8f00-a55fb6695be7
+
 ## Getting Started
 
 For detailed instructions on building and running the project, please refer to the [`build.md`](./build.md) file in the repository.
