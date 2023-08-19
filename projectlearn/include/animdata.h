@@ -2,6 +2,10 @@
 
 #include <glm/glm.hpp>
 
+/**
+ * Defination of C++ structure 'BoneInfo
+ */
+
 struct BoneInfo
 {
 	/*id is index in finalBoneMatrices*/
@@ -9,6 +13,5 @@ struct BoneInfo
 
 	/*offset matrix transforms vertex from model space to bone space*/
 	glm::mat4 offset;
-
 };
 #pragma once
